@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "learning_log"
+		},
+		{
+			"path": "learning_logs"
+		}
+	],
+	"settings": {
+		"python.pythonPath": "c:\\Users\\zhuan\\source\\git_repository\\learning_log_django\\ll_env\\Scripts\\python.exe"
+	}
+}
