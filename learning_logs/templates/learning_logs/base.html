@@ -2,11 +2,15 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>文档标题</title>
+        <title>父模板</title>
     </head>
  
     <body>
-        <h1>Learning Log</h1>
-        <p>Learning Log helps you track of your Learning, for any topic you're Learning about.</p>
+        <p>
+            <a href="{% url 'learning_logs:index' %}">Learing Log</a> - 
+            <a href="{% url 'learning_logs:topics' %}">Topics</a>
+        </p>
+        {% block content %}
+        {% endblock content %}
     </body>
 </html>
