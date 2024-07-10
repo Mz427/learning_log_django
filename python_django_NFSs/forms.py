@@ -1,5 +1,9 @@
 from django import forms
 
+class UploadFileForm(forms.Form):
+    title = forms.CharField(max_length=50)
+    file = forms.FileField()
+
 class MultipleFileInput(forms.ClearableFileInput):
     allow_multiple_selected = True
 
@@ -15,7 +19,3 @@ class MultipleFileField(forms.FileField):
         else:
             result = [single_file_clean(data, initial)]
         return result
-
-class UploadFileForm(forms.Form):
-    title = forms.CharField(max_length=50)
-    file = forms.FileField()

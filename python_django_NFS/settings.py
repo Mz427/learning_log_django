@@ -31,8 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # My APPS.
     'python_django_NFSs',
 
+    # Default APPS.
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
