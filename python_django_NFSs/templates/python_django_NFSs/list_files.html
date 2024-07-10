@@ -1,0 +1,20 @@
+{% extends "python_django_NFSs/base.html" %}
+{% block content %}
+    <p>
+        <form action="" method="post">
+            <input type="submit" value="上傳">
+            <input type="submit" value="下載">
+            <input type="submit" value="删除">
+            <input type="submit" value="重命名"><br><br>
+            <input type="checkbox">全選<br>
+            {% for i, j in files_attribute.items %}
+                <input type="checkbox" id="{{ forloop.counter }}" name="{{ i }}" value="{{ j }}">
+                {% if j == "dir" %}
+                <a href="{{ i }}">{{ i }}/</a><br>
+                {% else %}
+                    {{ i }}<br>
+                {% endif %}
+            {% endfor %}
+        </form>
+    </p>
+{% endblock content %}
