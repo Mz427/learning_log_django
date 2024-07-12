@@ -3,13 +3,14 @@
     <p>
         <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <input type="submit" value="Download">
-            <input type="submit" value="Delete">
-            <input type="submit" value="Rename">
-            <input type="submit" value="Upload">
+            <input type="submit" name="submit" value="Download">
+            <input type="submit" name="submit" value="Delete">
+            <input type="submit" name="submit" value="Rename">
+            <input type="submit" name="submit" value="Upload">
             <input type="file" name="upload_files" multiple><br><br>
             {{ cwd }}<br>
-            <input type="checkbox"> all<br>
+            <input type="checkbox" id="all" name="all">
+            <label for="all"> all</label><br>
             {% for i, j in files_attribute.items %}
                 <input type="checkbox" id="{{ forloop.counter }}" name="{{ i }}" value="{{ j }}">
                 {% if j == "dir" %}
