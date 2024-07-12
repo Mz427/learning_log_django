@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My APPS.
     'python_django_NFSs',
+    'users',
 
     # Default APPS.
     'django.contrib.admin',

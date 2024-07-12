@@ -1,9 +1,9 @@
 {% extends "python_django_NFSs/base.html" %}
 {% block content %}
-    <p>
-        <form>
+    {% if user.is_authenticated %}
+        <p>
             <a href="storage/Downloads">本地硬盤</a><br>
             <a href="storage/Documents">移動硬盤01</a><br>
-        </form>
-    </p>
+        </p>
+    {% endif %}
 {% endblock content %}

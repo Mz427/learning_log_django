@@ -15,7 +15,8 @@ def files_management(request, dir_name):
                 files_attribute[i] = "dir"
             else:
                 files_attribute[i] = "file"
-        return render(request, "python_django_NFSs/files_management.html", {"files_attribute": files_attribute, "cwd": dir_name + "/"})
+        context = {"files_attribute": files_attribute, "cwd": dir_name + "/"}
+        return render(request, "python_django_NFSs/files_management.html", context)
     elif request.method == "POST":
         if request.POST["submit"] == "Download":
             for i, j in request.POST.items():
