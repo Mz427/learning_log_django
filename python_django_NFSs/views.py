@@ -20,11 +20,8 @@ def files_management(request, dir_name):
         if request.POST["submit"] == "Download":
             for i, j in request.POST.items():
                 if j in ("file", "dir"):
-                    if i != "":
-                        print(i)
-                        # with open(f"{dir_path}{i}", "rb") as file_downloaded:
-                        file_downloaded = open(f"{dir_path}{i}", "rb") 
-                        return FileResponse(file_downloaded, as_attachment=True)
+                    file_downloaded = open(f"{dir_path}{i}", "rb") 
+                    return FileResponse(file_downloaded, as_attachment=True)
         elif request.POST["submit"] == "Upload":
             upload_files = request.FILES["upload_files"]
             with open(f"{dir_path}{upload_files.name}", "wb+") as file_uploaded:
