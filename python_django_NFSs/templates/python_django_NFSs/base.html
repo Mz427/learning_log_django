@@ -7,15 +7,11 @@
                 Hello, {{ user.username }}.
                 <form action="{% url 'users:logout' %}" method="POST">
                     {% csrf_token %}
-                    <input type="submit" name="submit" value="Logout">
+                    <button type="submit">Logout</button>
                 </form>
             {% else %}
-                <a href="{% url 'users:login' %}">
-                    <input type="submit" name="submit" value="Login">
-                </a>
-                <a href="{% url 'users:register' %}">
-                    <input type="submit" name="submit" value="Register">
-                </a>
+                <a href="{% url 'users:login' %}"><button>Login</button></a>
+                <a href="{% url 'users:register' %}"><button>Register</button></a>
             {% endif %}
             <hr/>
         </p>
