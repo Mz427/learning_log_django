@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'python_django_NFSs',
     'users',
 
+    'bootstrap4',
+
     # Default APPS.
     'django.contrib.admin',
     'django.contrib.auth',
